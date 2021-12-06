@@ -1,0 +1,55 @@
+
+<div class="card " >
+    <div style="padding-bottom:30px ;">
+      
+      <div style="text-align: right;;margin-right: 100px;">
+        <button (click)="logOut()" class="btn btn-dark w-30 " >
+          Logout</button>
+      </div>
+    <h1><b>Dashboard</b></h1><br>
+    <hr class="hr-light">
+
+    <div >
+     
+      
+
+        <table align="center" class="table table-dark table-striped" style="width:60%;">
+            <thead>
+              <tr>
+                <th scope="col"><h5>Booked Date</h5></th>
+                <th scope="col"><h5>Floor</h5></th>
+                <th scope="col"><h5>Port</h5></th>
+                <th scope="col"><h5>Desk No.</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let b1 of bookmy">
+                <td >{{b1.bookingDate}}</td>
+                <td *ngIf="b1.floorId!=0">{{b1.floorId}}</td>
+                <td *ngIf="b1.portId!=0">{{b1.portId}}</td>
+                <td *ngIf="b1.deskId!=0">{{b1.deskId}}</td>
+                <td *ngIf="b1.floorId===0">NA</td>
+                <td *ngIf="b1.portId===0">NA</td>
+                <td *ngIf="b1.deskId===0">NA</td>
+                <td *ngIf="b1.floorId===0"><button (click)="del(b1.bookingId,b1.bookingDate)"  class="btn btn-dark w-20 ">Delete</button></td>
+              </tr>
+              </tbody>
+              </table>
+    </div>
+
+<div  style="text-align: right;margin-right: 100px;">
+   
+    
+    <a routerLink="/mainpage/bookslot1">
+    <button class="btn btn-dark w-30 " >
+        Book Slot</button>
+
+    </a>
+
+    
+    
+</div>
+
+
+</div>
+</div>

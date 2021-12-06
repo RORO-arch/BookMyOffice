@@ -1,0 +1,19 @@
+
+.card
+{
+    background-color: rgba(245, 245, 245, 0.562);
+    width:90%;
+    margin-left:70px;
+    margin-top: 30px;
+    padding-top:50px;
+    margin-bottom: 40px;
+       
+}
+select
+{
+    width:230px;
+    
+}
+
+
+
