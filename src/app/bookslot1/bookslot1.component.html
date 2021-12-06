@@ -1,0 +1,26 @@
+
+<div class="card " >
+    <div style="padding-bottom:130px ;padding-top: 100px;">
+    <h4><b>Enter Date for booking slot</b></h4><br>
+    
+   <select [(ngModel)]="seldate">
+    <option value="none"  disabled selected >Select a Date</option>
+       <option  *ngFor="let d of dates">
+        {{d|date:'dd-MM-yyyy'}}
+       </option>
+   </select>
+   
+
+   
+  
+<br><br>
+<div  >
+ 
+    <button (click)="sel1()" class="btn btn-dark w-30 " >
+      Submit</button>
+ 
+</div>
+
+
+</div>
+</div>
